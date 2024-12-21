@@ -1,0 +1,56 @@
+@use './colors' as *;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@mixin base-font {
+	font-family: 'Manrope', sans-serif;
+}
+
+@mixin base-title {
+	@include base-font();
+	color: $very-dark-grayish-blue;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 2.4rem;
+	letter-spacing: 0.2px;
+}
+
+@mixin base-text {
+	@include base-font();
+	font-size: 1.3rem;
+	font-weight: 500;
+	line-height: 2rem;
+	letter-spacing: 0.12px;
+}
+
+@mixin mobile-title {
+	@include base-title();
+}
+
+@mixin tablet-title {
+	@include base-title();
+	font-size: 2rem;
+	line-height: 2.8rem;
+	letter-spacing: 0.25px;
+}
+
+@mixin text {
+	@include base-text();
+	color: $desaturated-dark-blue;
+}
+
+@mixin author {
+	@include base-text();
+	color: $very-dark-grayish-blue;
+	font-weight: 700;
+}
+
+@mixin date {
+	@include base-text();
+	color: $grayish-blue;
+}
+
+@mixin action {
+	@include base-text();
+	color: $grayish-blue;
+	letter-spacing: 5px;
+}

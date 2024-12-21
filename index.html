@@ -7,28 +7,53 @@
   <meta name="author" content="Sebastian Kliś">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Article preview component</title>
-
-
+  <script src="https://kit.fontawesome.com/2855fff603.js" crossorigin="anonymous"></script>
+  <script defer src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
 
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis possimus omnis aspernatur officiis asperiores
-    quisquam tempore maxime architecto, cum minima amet doloribus corporis corrupti consequuntur, sequi harum. Suscipit,
-    repellendus vitae!</p>
+  <main>
 
-  Shift the overall look and feel by adding these wonderful
-  touches to furniture in your home
+    <section class="article-preview">
+      <div class="image">
+        <img src="./images/drawers.jpg" alt="Green drawer with some white picture frames and a light brown vase on it.">
+      </div>
+      <div class="content">
+        <div class="wrapper col">
+          <h1 class="content__title">Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home</h1>
+          <p class="content__text">Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.</p>
+          <div class="content__footer">
+            <div class="author">
+              <div class="author__pfp"></div>
+              <div class="author__info">
+                <h3 class="author__info--name">Michelle Appleton</h3>
+                <h4 class="author__info--date">28 Jun 2020</h4>
+              </div>
+            </div>
+            <button class="share"></button>
+          </div>
+          <!-- <div class="content__footer content__footer--mobile-active">
+            <p class="text-share">share</p>
+            <a href="#" class="facebook"><img src="./images/icon-facebook.svg" alt="facebook"></a>
+            <a href="#" class="twitter"><img src="./images/icon-twitter.svg" alt="twitter"></a>
+            <a href="#" class="pinterest"><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
+          </div>
+          <div class="content__footer content__footer--tablet-active">
+            <p class="text-share">share</p>
+            <a href="#" class="facebook"><img src="./images/icon-facebook.svg" alt="facebook"></a>
+            <a href="#" class="twitter"><img src="./images/icon-twitter.svg" alt="twitter"></a>
+            <a href="#" class="pinterest"><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
+          </div> -->
+        </div>
+      </div>
+    </section>
 
-  Ever been in a room and felt like something was missing? Perhaps
-  it felt slightly bare and uninviting. I’ve got some simple tips
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
+  </main>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

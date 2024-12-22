@@ -96,6 +96,10 @@ img {
   line-height: 2.4rem;
   letter-spacing: 0.2px;
 }
+.content__title:hover, .content__title:active, .content__title:focus {
+  outline: none;
+  color: #b17228;
+}
 .content__text {
   font-family: "Manrope", sans-serif;
   font-size: 1.3rem;
@@ -115,6 +119,12 @@ img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+}
+.content .share-btn:hover, .content .share-btn:active, .content .share-btn:focus,
+.content .close-btn:hover,
+.content .close-btn:active,
+.content .close-btn:focus {
+  background-color: #ecf2f8;
 }
 
 .author {
@@ -137,6 +147,10 @@ img {
   color: #48556a;
   font-weight: 700;
 }
+.author__info--name:hover, .author__info--name:active, .author__info--name:focus {
+  outline: none;
+  color: #b17228;
+}
 .author__info--date {
   font-family: "Manrope", sans-serif;
   font-size: 1.3rem;
@@ -148,19 +162,19 @@ img {
 
 .tooltip-mobile {
   opacity: 0;
-  display: flex;
-  justify-content: space-between;
   position: absolute;
   bottom: 0;
   left: 0;
+  transform: translateY(15%);
+  display: flex;
+  justify-content: space-between;
   padding: 2.2em 3.2em 2.35em;
   width: 100%;
-  transform: translateY(15%);
   background-color: #48556a;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  z-index: -2;
   transition: transform 0.3s, opacity 0.3s, z-index 0.35s;
+  z-index: -2;
 }
 .tooltip-mobile .wrapper {
   display: flex;
@@ -217,13 +231,12 @@ img {
   }
   .tooltip-tablet {
     opacity: 0;
-    display: flex;
-    visibility: none;
-    gap: 1.6em;
     position: absolute;
     bottom: 107px;
     right: -67px;
     transform: translateY(50%);
+    display: flex;
+    gap: 1.6em;
     padding: 1.8em 3.6em;
     background-color: #48556a;
     border-radius: 10px;

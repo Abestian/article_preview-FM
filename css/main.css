@@ -54,10 +54,6 @@ img {
   max-width: 100%;
 }
 
-.share-active {
-  display: flex;
-}
-
 .col {
   display: flex;
   flex-direction: column;
@@ -114,8 +110,8 @@ img {
   align-items: center;
   justify-content: space-between;
 }
-.content .share-btn {
-  position: relative;
+.content .share-btn,
+.content .close-btn {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -150,24 +146,26 @@ img {
   color: #9eafc2;
 }
 
-.content__footer--mobile {
+.tooltip-mobile {
   display: none;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 2.2em 3.2em;
+  padding: 2.2em 3.2em 2.35em;
   width: 100%;
   background-color: #48556a;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   z-index: 2;
+  transition: opacity 0.3s;
 }
-.content__footer--mobile .wrapper {
+.tooltip-mobile .wrapper {
   display: flex;
   align-items: center;
   gap: 1.6em;
 }
-.content__footer--mobile .wrapper .text-share {
+.tooltip-mobile .wrapper .text-share {
   font-family: "Manrope", sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
@@ -179,8 +177,12 @@ img {
   margin-right: 4px;
 }
 
-.content__footer--tablet {
+.tooltip-tablet {
   display: none;
+}
+
+.tooltip-active {
+  display: flex;
 }
 
 @media (width > 992px) {
@@ -209,7 +211,7 @@ img {
     line-height: 2.8rem;
     letter-spacing: 0.25px;
   }
-  .content__footer--tablet {
+  .tooltip-tablet {
     display: none;
     gap: 1.6em;
     position: absolute;
@@ -219,8 +221,9 @@ img {
     background-color: #48556a;
     border-radius: 10px;
     z-index: 10;
+    transition: opacity 0.3s;
   }
-  .content__footer--tablet::after {
+  .tooltip-tablet::after {
     content: "";
     position: absolute;
     bottom: -1.6rem;
@@ -232,7 +235,7 @@ img {
     border-right: 2rem solid transparent;
     border-top: 2rem solid #48556a;
   }
-  .content__footer--tablet .text-share {
+  .tooltip-tablet .text-share {
     font-family: "Manrope", sans-serif;
     font-size: 1.3rem;
     font-weight: 500;
@@ -242,5 +245,8 @@ img {
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-right: 4px;
+  }
+  .tooltip-active {
+    display: flex;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -67,7 +67,9 @@ img {
 }
 
 .card {
-  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
   overflow: hidden;
   max-width: 327px;
   background-color: #fff;
@@ -122,6 +124,7 @@ img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  z-index: 10;
 }
 .author__info--name {
   font-family: "Manrope", sans-serif;
@@ -139,4 +142,30 @@ img {
   line-height: 2rem;
   letter-spacing: 0.12px;
   color: #9eafc2;
+}
+
+@media (width > 992px) {
+  .card {
+    flex-direction: row;
+    max-width: 730px;
+  }
+  .card .image {
+    height: auto;
+    width: 110%;
+    max-width: 285px;
+  }
+  .content {
+    padding: 3.2em 4em;
+  }
+  .content__title {
+    font-family: "Manrope", sans-serif;
+    color: #48556a;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    letter-spacing: 0.2px;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.25px;
+  }
 }/*# sourceMappingURL=main.css.map */

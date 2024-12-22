@@ -24,7 +24,9 @@ img {
 }
 
 .card {
-	margin: 2em;
+	display: flex;
+	flex-direction: column;
+	margin: 1em;
 	overflow: hidden;
 	max-width: 327px;
 	background-color: $white;
@@ -53,15 +55,15 @@ img {
 
 	&__footer {
 		display: flex;
-        align-items: center;
+		align-items: center;
 		justify-content: space-between;
 	}
 
-    .share {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-    }
+	.share {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+	}
 }
 
 .author {
@@ -74,6 +76,7 @@ img {
 		height: 40px;
 		width: 40px;
 		border-radius: 50%;
+		z-index: 10;
 	}
 
 	&__info {
@@ -83,6 +86,27 @@ img {
 
 		&--date {
 			@include date();
+		}
+	}
+}
+
+@media (width > 992px) {
+	.card {
+		flex-direction: row;
+		max-width: 730px;
+
+		.image {
+			height: auto;
+			width: 110%;
+			max-width: 285px;
+		}
+	}
+
+	.content {
+		padding: 3.2em 4em;
+
+		&__title {
+			@include tablet-title();
 		}
 	}
 }

@@ -10,6 +10,10 @@ img {
 	max-width: 100%;
 }
 
+.share-active {
+	display: flex;
+}
+
 .col {
 	display: flex;
 	flex-direction: column;
@@ -27,7 +31,6 @@ img {
 	display: flex;
 	flex-direction: column;
 	margin: 1em;
-	overflow: hidden;
 	max-width: 327px;
 	background-color: $white;
 	border-radius: 10px;
@@ -38,10 +41,13 @@ img {
 		background-position-y: 25%;
 		background-size: cover;
 		height: 200px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 }
 
 .content {
+	position: relative;
 	padding: 3.6em 3.2em 2em;
 
 	&__title {
@@ -58,8 +64,8 @@ img {
 		align-items: center;
 		justify-content: space-between;
 	}
-
-	.share {
+	.share-btn {
+		position: relative;
 		width: 32px;
 		height: 32px;
 		border-radius: 50%;
@@ -76,7 +82,6 @@ img {
 		height: 40px;
 		width: 40px;
 		border-radius: 50%;
-		z-index: 10;
 	}
 
 	&__info {
@@ -90,6 +95,33 @@ img {
 	}
 }
 
+.content__footer--mobile {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2.2em 3.2em;
+	width: 100%;
+	background-color: $very-dark-grayish-blue;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	z-index: 2;
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+		gap: 1.6em;
+		.text-share {
+			@include action();
+			margin-right: 4px;
+		}
+	}
+}
+
+.content__footer--tablet {
+	display: none;
+}
+
 @media (width > 992px) {
 	.card {
 		flex-direction: row;
@@ -99,6 +131,8 @@ img {
 			height: auto;
 			width: 110%;
 			max-width: 285px;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 10px;
 		}
 	}
 
@@ -107,6 +141,35 @@ img {
 
 		&__title {
 			@include tablet-title();
+		}
+	}
+	.content__footer--tablet {
+		display: none;
+		gap: 1.6em;
+		position: absolute;
+		bottom: 107px;
+		right: -67px;
+		padding: 1.8em 3.6em;
+		background-color: $very-dark-grayish-blue;
+		border-radius: 10px;
+		z-index: 10;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -1.6rem;
+			left: 50%;
+			transform: translate(-50%);
+			width: 0;
+			height: 0;
+			border-left: 2rem solid transparent;
+			border-right: 2rem solid transparent;
+			border-top: 2rem solid $very-dark-grayish-blue;
+		}
+
+		.text-share {
+			@include action();
+			margin-right: 4px;
 		}
 	}
 }

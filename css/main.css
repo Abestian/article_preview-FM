@@ -44,4 +44,99 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  background-color: #ecf2f8;
+}
+
+img {
+  max-width: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  margin: 2em;
+  overflow: hidden;
+  max-width: 327px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.05);
+}
+.card .image {
+  background-image: url(../images/drawers.jpg);
+  background-position-y: 25%;
+  background-size: cover;
+  height: 200px;
+}
+
+.content {
+  padding: 3.6em 3.2em 2em;
+}
+.content__title {
+  font-family: "Manrope", sans-serif;
+  color: #48556a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0.2px;
+}
+.content__text {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0.12px;
+  color: #6d7f97;
+  margin: 0.925em 0 2.46em;
+}
+.content__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .share {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.author__pfp {
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.author__info--name {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0.12px;
+  color: #48556a;
+  font-weight: 700;
+}
+.author__info--date {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0.12px;
+  color: #9eafc2;
 }/*# sourceMappingURL=main.css.map */

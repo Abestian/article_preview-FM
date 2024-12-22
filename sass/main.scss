@@ -1,3 +1,88 @@
 @use './reset' as *;
 @use './typography' as *;
 @use './colors' as *;
+
+body {
+	background-color: $light-grayish-blue;
+}
+
+img {
+	max-width: 100%;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+// center the card
+.article-preview {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.card {
+	margin: 2em;
+	overflow: hidden;
+	max-width: 327px;
+	background-color: $white;
+	border-radius: 10px;
+	box-shadow: 8px 8px 15px rgba($color: #000000, $alpha: 0.05);
+
+	.image {
+		background-image: url(../images/drawers.jpg);
+		background-position-y: 25%;
+		background-size: cover;
+		height: 200px;
+	}
+}
+
+.content {
+	padding: 3.6em 3.2em 2em;
+
+	&__title {
+		@include mobile-title();
+	}
+
+	&__text {
+		@include text();
+		margin: 0.925em 0 2.46em;
+	}
+
+	&__footer {
+		display: flex;
+        align-items: center;
+		justify-content: space-between;
+	}
+
+    .share {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+}
+
+.author {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	&__pfp {
+		overflow: hidden;
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+	}
+
+	&__info {
+		&--name {
+			@include author();
+		}
+
+		&--date {
+			@include date();
+		}
+	}
+}
